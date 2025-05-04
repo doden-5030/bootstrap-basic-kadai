@@ -1,0 +1,32 @@
+/* カルーセル内の画像を指定したサイズに固定 */
+.carousel-item img {
+  width: 1200px; /* 幅を1200pxに */
+  height: 795px; /* 高さを795pxに */
+  object-fit: cover; /* 画像が歪まないように調整 */
+  display: block;
+  margin: 0 auto; /* 中央寄せ */
+}
+
+/* キャプションを常に中央に固定表示 */
+.carousel-caption {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%); /* 横方向中央 */
+  z-index: 10;
+  color: white;
+  text-align: center;
+}
+
+/* 前後のナビゲーションボタンを常に表示 */
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+  z-index: 11;
+}
+
+/* 背景画像の上でもキャプションが読めるようにする（任意） */
+.carousel-caption h1,
+.carousel-caption p {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
